@@ -28,7 +28,7 @@ export default function RootLayout({
       className="bg-purple-100 dark:bg-purple-950"
       suppressHydrationWarning={true}
     >
-      <body className={belleza.className}>
+      <body className={belleza.className} suppressHydrationWarning={true}>
         <div className="flex bg-purple-100 dark:bg-purple-950">
           <ThemeProvider
             attribute="class"
