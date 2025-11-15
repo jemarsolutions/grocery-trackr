@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Grocery Trackr
 
-## Getting Started
+**Grocery Trackr** is a **smart home inventory app** built with **Next.js 16** that helps families and individuals manage grocery items efficiently. Track what you have, what’s running low, and what you need to buy next — all in one place.  
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **User Authentication** – Users can sign up and sign in to manage their personal grocery inventory.  
+- **Product Management** – Add and update products with details like quantity, brand, and price.  
+- **To-Buy List** – Automatically track items that are running low and need to be purchased.  
+- **Dark Mode Support** – Toggle between light, dark, or system theme for comfortable viewing.  
+- **Server-Side Session Handling** – Ensures data is dynamically loaded and secure.  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## App Overview
 
-## Learn More
+- **Home Page** – Displays welcome information and options to sign in or sign up.  
+- **Product Dashboard** – View all products, update details, and monitor quantities.  
+- **Add Product Page** – Add new grocery items with essential details.  
+- **To-Buy List Page** – Displays items that need to be purchased next.  
+- **Theme Toggle** – Switch between light, dark, or system theme using the toggle button.  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Visual Walkthrough
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Home Page
+![Home Page](path-to-your-screenshot/home.png)
+- Welcome message
+- Sign In / Sign Up buttons
+- If signed in, shows "Add Product" button
 
-## Deploy on Vercel
+### Product Dashboard
+![Product Dashboard](path-to-your-screenshot/dashboard.png)
+- Lists all products
+- Shows current quantity, brand, and price
+- Ability to update product details
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Add Product Page
+![Add Product Page](path-to-your-screenshot/add-product.png)
+- Form to input product name, quantity, price, brand, and other details
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### To-Buy List Page
+![To-Buy List Page](path-to-your-screenshot/to-buy-list.png)
+- Lists items that are below the minimum quantity
+- Helps users plan their next shopping trip
+
+### Theme Toggle
+![Theme Toggle](path-to-your-screenshot/theme-toggle.png)
+- Switch between **light**, **dark**, or **system** themes for the app
+
+---
+
+## Technologies Used
+
+- **Next.js 16** – App router, server actions, layouts  
+- **React** – Frontend UI components  
+- **Tailwind CSS** – Styling and responsive design  
+- **Next-Themes** – Dark/light theme management  
+- **Neon (PostgreSQL)** – Database for storing products and user data  
+- **Drizzle ORM** – Type-safe database queries  
+- **Lucide Icons** – Icons for UI elements  
+
+---
+
+## Purpose
+
+Grocery Trackr makes grocery management simple and organized. Users can:  
+
+- Quickly see what groceries are available.  
+- Know which items are running low.  
+- Keep grocery shopping stress-free and efficient.  
