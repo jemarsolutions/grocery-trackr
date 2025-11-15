@@ -24,31 +24,26 @@
 
 ---
 
-## Visual Walkthrough
+## The Walkthrough
 
 ### Home Page
-![Home Page](path-to-your-screenshot/home.png)
 - Welcome message
 - Sign In / Sign Up buttons
 - If signed in, shows "Add Product" button
 
 ### Product Dashboard
-![Product Dashboard](path-to-your-screenshot/dashboard.png)
 - Lists all products
 - Shows current quantity, brand, and price
 - Ability to update product details
 
 ### Add Product Page
-![Add Product Page](path-to-your-screenshot/add-product.png)
 - Form to input product name, quantity, price, brand, and other details
 
 ### To-Buy List Page
-![To-Buy List Page](path-to-your-screenshot/to-buy-list.png)
 - Lists items that are below the minimum quantity
 - Helps users plan their next shopping trip
 
 ### Theme Toggle
-![Theme Toggle](path-to-your-screenshot/theme-toggle.png)
 - Switch between **light**, **dark**, or **system** themes for the app
 
 ---
