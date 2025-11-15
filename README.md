@@ -51,7 +51,8 @@
 ## Technologies Used
 
 - **Next.js 16** – App router, server actions, layouts  
-- **React** – Frontend UI components  
+- **React** – Frontend UI components
+- **Better Auth** - App Authentication
 - **Tailwind CSS** – Styling and responsive design  
 - **Next-Themes** – Dark/light theme management  
 - **Neon (PostgreSQL)** – Database for storing products and user data  
