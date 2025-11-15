@@ -4,6 +4,7 @@ import { getAllProducts } from "@/server/product/getAllProducts";
 import { headers } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+export const dynamic = "force-dynamic";
 
 const ProductsPage = async () => {
   let session = null;

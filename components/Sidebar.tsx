@@ -3,6 +3,7 @@ import { headers } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
 import SidebarLinks from "./SidebarLinks";
+export const dynamic = "force-dynamic";
 
 const Sidebar = async () => {
   let session = null;

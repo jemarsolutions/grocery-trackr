@@ -4,6 +4,7 @@ import { getProductById } from "@/server/product/getProductByID";
 import { headers } from "next/headers";
 import Image from "next/image";
 import { redirect } from "next/navigation";
+export const dynamic = "force-dynamic";
 
 const ProductDetail = async ({
   params,
