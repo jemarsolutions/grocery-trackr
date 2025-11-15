@@ -22,9 +22,14 @@ interface ProductListProps {
 }
 
 const ProductList: React.FC<ProductListProps> = async ({ products }) => {
-  const session = await auth.api.getSession({
-    headers: await headers(),
-  });
+  let session = null;
+  try {
+    session = await auth.api.getSession({
+      headers: await headers(),
+    });
+  } catch (e) {
+    console.log("No session context available:", e);
+  }
   if (!session) return null;
   return (
     <table className="w-full divide-y divide-gray-200 dark:divide-neutral-700 rounded-2xl overflow-hidden">

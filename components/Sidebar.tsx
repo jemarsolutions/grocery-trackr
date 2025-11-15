@@ -5,9 +5,14 @@ import Link from "next/link";
 import SidebarLinks from "./SidebarLinks";
 
 const Sidebar = async () => {
-  const session = await auth.api.getSession({
-    headers: await headers(),
-  });
+  let session = null;
+  try {
+    session = await auth.api.getSession({
+      headers: await headers(),
+    });
+  } catch (e) {
+    console.log("No session context available:", e);
+  }
   if (!session) return null;
   return (
     <div>

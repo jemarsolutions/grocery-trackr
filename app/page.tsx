@@ -4,9 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Home = async () => {
-  const session = await auth.api.getSession({
-    headers: await headers(),
-  });
+  let session = null;
+  try {
+    session = await auth.api.getSession({
+      headers: await headers(),
+    });
+  } catch (e) {
+    console.log("No session context available:", e);
+  }
   return (
     <div className="flex items-center h-screen justify-center w-full">
       <section>

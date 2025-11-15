@@ -13,9 +13,14 @@ const ProductDetail = async ({
   const { id } = await params;
   const productData = await getProductById(id);
   const product = productData[0];
-  const session = await auth.api.getSession({
-    headers: await headers(),
-  });
+  let session = null;
+  try {
+    session = await auth.api.getSession({
+      headers: await headers(),
+    });
+  } catch (e) {
+    console.log("No session context available:", e);
+  }
   if (!session) redirect("/");
   return (
     <div className="flex min-h-full w-full flex-col px-6 py-12 lg:px-8 items-center gap-6">

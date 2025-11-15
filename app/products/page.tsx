@@ -6,9 +6,14 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 const ProductsPage = async () => {
-  const session = await auth.api.getSession({
-    headers: await headers(),
-  });
+  let session = null;
+  try {
+    session = await auth.api.getSession({
+      headers: await headers(),
+    });
+  } catch (e) {
+    console.log("No session context available:", e);
+  }
   const products = await getAllProducts();
   if (!session) redirect("/signin");
   return (
