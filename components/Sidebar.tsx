@@ -17,7 +17,7 @@ const Sidebar = async () => {
   if (!session) return null;
   return (
     <div>
-      <aside className="flex flex-col w-64 h-screen px-4 py-8 overflow-y-auto bg-purple-50 border-r rtl:border-r-0 rtl:border-l dark:bg-purple-900 dark:border-purple-700">
+      <aside className="flex flex-col w-64 h-screen px-4 py-8 overflow-y-auto bg-purple-50 border-r border-purple-300 shadow-md rtl:border-r-0 rtl:border-l dark:bg-purple-900 dark:border-purple-700">
         <Link href="/" className="mx-auto flex gap-3 items-center">
           <p className="uppercase font-medium text-lg">Grocery</p>
           <img className="w-auto h-6 sm:h-7" src="/images/logo.png" alt="" />
