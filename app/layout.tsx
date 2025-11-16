@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Belleza } from "next/font/google";
 import "./globals.css";
-import Sidebar from "@/components/Sidebar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ModeToggle } from "@/components/ModeToggle";
+import SidebarWrapper from "@/components/SidebarWrapper";
 
 const belleza = Belleza({
   weight: "400", // Specify the desired weight
@@ -40,7 +40,7 @@ export default function RootLayout({
               <ModeToggle />
             </div>
 
-            <Sidebar />
+            <SidebarWrapper />
             {children}
           </ThemeProvider>
         </div>
