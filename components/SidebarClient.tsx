@@ -48,7 +48,7 @@ const SidebarClient = ({ session }: { session: any }) => {
             width={100}
             height={100}
           />
-          <h4 className="mt-2 text-xl font-medium text-purple-800 dark:text-purple-200 text-center break-words">
+          <h4 className="mt-2 text-xl font-medium text-purple-800 dark:text-purple-200 text-center wrap-break-words">
             {session.user.name}
           </h4>
           <Link
