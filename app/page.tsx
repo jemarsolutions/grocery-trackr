@@ -1,4 +1,7 @@
+import PrintButton from "@/components/PrintButton";
+import ProductsToPrint from "@/components/ProductsToPrint";
 import { auth } from "@/lib/auth";
+import { getAllToBuyProducts } from "@/server/product/getAllToBuyProducts";
 import { headers } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,6 +17,7 @@ const Home = async () => {
   } catch (e) {
     console.log("No session context available:", e);
   }
+  const products = await getAllToBuyProducts();
 
   return (
     <div className="flex items-center justify-center min-h-screen w-full bg-purple-100 dark:bg-purple-950 px-4">
@@ -34,13 +38,15 @@ const Home = async () => {
           </h2>
 
           {/* Description */}
-          <p className="mt-4 sm:mt-6 text-gray-600 dark:text-gray-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto">
+          <p className="my-4 sm:mt-6 text-gray-600 dark:text-gray-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto">
             <b>Grocery Trackr</b> is a smart home inventory app that helps you
             and your family keep track of grocery items — what you have, what’s
             running low, and what you need to buy next. Easily manage
             quantities, brands, and prices, so grocery shopping becomes
             organized, efficient, and stress-free.
           </p>
+
+          {session && <ProductsToPrint products={products} />}
 
           {/* Buttons for non-logged-in users */}
           {!session && (
