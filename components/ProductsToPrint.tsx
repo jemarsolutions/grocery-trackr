@@ -24,10 +24,7 @@ const ProductsToPrint: React.FC<ProductsToPrintProps> = ({ products }) => {
   return (
     <>
       <div className="w-full overflow-y-auto overflow-x-auto h-60 mt-10">
-        <div
-          className="flex flex-col border border-gray-300  rounded-xl w-full overflow-hidden min-w-md"
-          ref={printRef}
-        >
+        <div className="flex flex-col border border-gray-300  rounded-xl w-full overflow-hidden min-w-md">
           <div className="border-b border-gray-300 p-3 bg-purple-300 dark:bg-purple-700 flex items-center justify-between">
             <p className="font-bold">To Buy Products</p>
             <button
@@ -37,11 +34,21 @@ const ProductsToPrint: React.FC<ProductsToPrintProps> = ({ products }) => {
               Print
             </button>
           </div>
-          <div className="p-5 bg-purple-100 dark:bg-purple-500">
+
+          <div
+            className="p-5 bg-purple-100 dark:bg-purple-500 flex flex-col"
+            ref={printRef}
+          >
+            <p className="self-start mb-5 font-extralight text-black dark:text-white">
+              To Buy Checklist -{" "}
+              <span className="italic">
+                Please check if you already bought it.
+              </span>
+            </p>
             {products.map((product) => (
               <div
                 key={product.id}
-                className="flex items-start justify-between p-2 not-last:border-b dark:text-white text-purple-950 border-gray-300 dark:even:bg-purple-600 even:bg-purple-300"
+                className="flex items-start justify-between p-2 not-last:border-b dark:text-white text-purple-950 border-gray-300 dark:odd:bg-purple-600 odd:bg-purple-300"
               >
                 <div className="flex items-center justify-start gap-2">
                   <input type="checkbox" />
