@@ -46,8 +46,6 @@ const Home = async () => {
             organized, efficient, and stress-free.
           </p>
 
-          {session && <ProductsToPrint products={products} />}
-
           {/* Buttons for non-logged-in users */}
           {!session && (
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center">
@@ -77,6 +75,8 @@ const Home = async () => {
               </Link>
             </div>
           )}
+
+          {session && <ProductsToPrint products={products} />}
         </div>
       </section>
     </div>
