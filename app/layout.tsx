@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ModeToggle } from "@/components/ModeToggle";
 import SidebarWrapper from "@/components/SidebarWrapper";
+import { Toaster } from "@/components/ui/sonner";
 
 const belleza = Belleza({
   weight: "400", // Specify the desired weight
@@ -42,6 +43,7 @@ export default function RootLayout({
 
             <SidebarWrapper />
             {children}
+            <Toaster />
           </ThemeProvider>
         </div>
       </body>
